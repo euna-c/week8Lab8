@@ -22,11 +22,13 @@
                         <td>${note.datecreated}</td>
                         <td>${note.title}</td>
                         <td type="hidden" name="id" value="${note.noteid}"></td>
-                        <td><input type="submit" name="edit" value="edit"></td>
+                        <td><input type="submit" name="button" value="edit"></td>
                     </tr>
                     </c:forEach>
-                    
+                  
                 </table>
+            </form>
+            <form action="notes" method="post">
                 <h2>Add Note</h2>
                
                 <input type="submit" name="action" value="Delete Note"><br><br>

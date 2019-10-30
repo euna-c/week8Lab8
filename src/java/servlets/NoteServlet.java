@@ -55,11 +55,13 @@ public class NoteServlet extends HttpServlet {
             {
                 case "add":
                 {
-                    ns.insert(titleTxt, contentsTxt);
+                    if(!titleTxt.equals("") && !contentsTxt.equals(""))
+                    {
+                        ns.insert(titleTxt, contentsTxt);
+                    }
                 }
                 break;
-                
-                
+              
             }
             
             
