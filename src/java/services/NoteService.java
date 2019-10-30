@@ -6,6 +6,7 @@
 package services;
 
 import dataaccess.NoteDB;
+import java.util.Date;
 import java.util.List;
 import models.Note;
 
@@ -45,5 +46,16 @@ public class NoteService
        
        db.delete(note);
     }
-   
+    public void insert(String contents, String title) throws Exception {
+        NoteDB db = new NoteDB();
+        //pass a dummy note id of 0 and the current date/time for date created to the DB layer
+          // all new users are regular users
+         
+ 
+        Date date = new Date();
+        Note note= new Note(0, date, contents, title);
+        
+        db.insert(note);
+        
+    }
 }
